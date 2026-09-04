@@ -1,447 +1,1036 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Thumbnail Preview Tool</title>
     <link rel="stylesheet" href="./style.css" />
-</head>
-<body data-theme="dark">
-
+  </head>
+  <body data-theme="dark">
     <div class="toolbar">
-        <div class="input-group">
-            <label for="imageUpload">Upload Thumbnail</label>
-            <input type="file" id="imageUpload" accept="image/*">
-        </div>
-        <div class="input-group">
-            <label for="titleInput">Video Title</label>
-            <input type="text" id="titleInput" value="I Survived 50 Hours In Antarctica">
-        </div>
-        <div class="input-group">
-            <label for="channelInput">Channel Name</label>
-            <input type="text" id="channelInput" value="MrCreator">
-        </div>
-        <button class="theme-toggle" id="themeToggle">☀️ Switch to Light Mode</button>
+      <div class="input-group">
+        <label for="imageUpload">Upload Thumbnail</label>
+        <input type="file" id="imageUpload" accept="image/*" />
+      </div>
+      <div class="input-group">
+        <label for="titleInput">Video Title</label>
+        <input
+          type="text"
+          id="titleInput"
+          value="I Survived 50 Hours In Antarctica"
+        />
+      </div>
+      <div class="input-group">
+        <label for="channelInput">Channel Name</label>
+        <input type="text" id="channelInput" value="MrCreator" />
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        ☀️ Switch to Light Mode
+      </button>
     </div>
 
     <div class="container">
-
-        <h2 class="category-title">Desktop Homepage & Channel Pages</h2>
-        <div class="previews-grid">
-            
-            <div class="preview-block">
-                <div class="preview-label">Homepage Large (360x205)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid user-card" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 205px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar dynamic-avatar" style="background: #FF5722;">M</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title">Title Here</div>
-                                <div class="yt-channel-name dynamic-channel">Channel</div>
-                                <div class="yt-views">2.4M views • 1 day ago</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 205px;"><img src="https://picsum.photos/id/10/640/360" class="yt-thumbnail"><div class="yt-duration">12:10</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar" style="background: #4CAF50;">N</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title">10 Scenic Walking Trails You Need to Visit</div>
-                                <div class="yt-channel-name">Nature Daily</div>
-                                <div class="yt-views">420K views • 2 days ago</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 205px;"><img src="https://picsum.photos/id/26/640/360" class="yt-thumbnail"><div class="yt-duration">28:45</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar" style="background: #2196F3;">T</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title">Building a Full Setup with Minimal Budget</div>
-                                <div class="yt-channel-name">Tech Lab</div>
-                                <div class="yt-views">910K views • 5 days ago</div>
-                            </div>
-                        </div>
-                    </div>
+      <h2 class="category-title">Desktop Homepage & Channel Pages</h2>
+      <div class="previews-grid">
+        <div class="preview-block">
+          <div class="preview-label">Homepage Large (360x205)</div>
+          <div class="context-row">
+            <div class="yt-card-grid user-card" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 205px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-avatar dynamic-avatar"
+                  style="background: #ff5722"
+                >
+                  M
                 </div>
-            </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Homepage Small (240x135)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid" style="width: 240px;">
-                        <div class="yt-thumbnail-container" style="width: 240px; height: 135px;"><img src="https://picsum.photos/id/48/640/360" class="yt-thumbnail"><div class="yt-duration">08:12</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar" style="width:24px; height:24px; font-size:12px; background: #9C27B0;">C</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title" style="font-size:13px;">Full Stack Guide 2026</div>
-                                <div class="yt-channel-name" style="font-size:12px;">DevBytes</div>
-                                <div class="yt-views" style="font-size:12px;">150K views</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid user-card" style="width: 240px;">
-                        <div class="yt-thumbnail-container" style="width: 240px; height: 135px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar dynamic-avatar" style="width:24px; height:24px; font-size:12px; background: #FF5722;">M</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title" style="font-size:13px;">Title Here</div>
-                                <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                                <div class="yt-views" style="font-size:12px;">2.4M views</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 240px;">
-                        <div class="yt-thumbnail-container" style="width: 240px; height: 135px;"><img src="https://picsum.photos/id/60/640/360" class="yt-thumbnail"><div class="yt-duration">15:00</div></div>
-                        <div class="yt-details">
-                            <div class="yt-avatar" style="width:24px; height:24px; font-size:12px; background: #FF9800;">W</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title" style="font-size:13px;">Workspace Upgrade Tips</div>
-                                <div class="yt-channel-name" style="font-size:12px;">DeskSetup</div>
-                                <div class="yt-views" style="font-size:12px;">320K views</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="yt-meta">
+                  <div class="yt-video-title dynamic-title">Title Here</div>
+                  <div class="yt-channel-name dynamic-channel">Channel</div>
+                  <div class="yt-views">2.4M views • 1 day ago</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Channel Page (270x150)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid user-card" style="width: 270px;">
-                        <div class="yt-thumbnail-container" style="width: 270px; height: 150px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title">Title Here</div>
-                                <div class="yt-views">2.4M views • 1 day ago</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 270px;">
-                        <div class="yt-thumbnail-container" style="width: 270px; height: 150px;"><img src="https://picsum.photos/id/85/640/360" class="yt-thumbnail"><div class="yt-duration">09:40</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title">My Everyday Carry Essentials</div>
-                                <div class="yt-views">1.1M views • 3 weeks ago</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 270px;">
-                        <div class="yt-thumbnail-container" style="width: 270px; height: 150px;"><img src="https://picsum.photos/id/96/640/360" class="yt-thumbnail"><div class="yt-duration">21:05</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title">A Week Without My Phone Challenge</div>
-                                <div class="yt-views">870K views • 2 months ago</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 205px"
+              >
+                <img
+                  src="https://picsum.photos/id/10/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">12:10</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-avatar" style="background: #4caf50">N</div>
+                <div class="yt-meta">
+                  <div class="yt-video-title">
+                    10 Scenic Walking Trails You Need to Visit
+                  </div>
+                  <div class="yt-channel-name">Nature Daily</div>
+                  <div class="yt-views">420K views • 2 days ago</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Channel Page Small (198x112)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid user-card" style="width: 198px;">
-                        <div class="yt-thumbnail-container" style="width: 198px; height: 112px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title" style="font-size:13px;">Title Here</div>
-                                <div class="yt-views" style="font-size:12px;">2.4M views</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 198px;">
-                        <div class="yt-thumbnail-container" style="width: 198px; height: 112px;"><img src="https://picsum.photos/id/111/640/360" class="yt-thumbnail"><div class="yt-duration">14:20</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title" style="font-size:13px;">Living Tiny House Tour</div>
-                                <div class="yt-views" style="font-size:12px;">540K views</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid" style="width: 198px;">
-                        <div class="yt-thumbnail-container" style="width: 198px; height: 112px;"><img src="https://picsum.photos/id/133/640/360" class="yt-thumbnail"><div class="yt-duration">06:55</div></div>
-                        <div class="yt-details">
-                            <div class="yt-meta">
-                                <div class="yt-video-title" style="font-size:13px;">Morning Coffee Routine</div>
-                                <div class="yt-views" style="font-size:12px;">230K views</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 205px"
+              >
+                <img
+                  src="https://picsum.photos/id/26/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">28:45</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-avatar" style="background: #2196f3">T</div>
+                <div class="yt-meta">
+                  <div class="yt-video-title">
+                    Building a Full Setup with Minimal Budget
+                  </div>
+                  <div class="yt-channel-name">Tech Lab</div>
+                  <div class="yt-views">910K views • 5 days ago</div>
                 </div>
+              </div>
             </div>
-
+          </div>
         </div>
 
-        <h2 class="category-title">Search, Sidebar & Watch Later</h2>
-        <div class="previews-grid">
-            
-            <div class="preview-block">
-                <div class="preview-label">Search Result Large (360x202)</div>
-                <div class="context-col">
-                    <div class="yt-card-list user-card">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 202px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details" style="max-width: 550px;">
-                            <div class="yt-video-title dynamic-title" style="font-size:18px;">Title Here</div>
-                            <div class="yt-views" style="margin-bottom: 10px;">2.4M views • 1 day ago</div>
-                            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                                <div class="yt-avatar dynamic-avatar" style="width:24px; height:24px; font-size:12px; background: #FF5722;">M</div>
-                                <div class="yt-channel-name dynamic-channel">Channel</div>
-                            </div>
-                            <div class="yt-views" style="font-size:12px;">Full documentary detailing 50 hours trapped in harsh snow and ice conditions...</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 202px;"><img src="https://picsum.photos/id/160/640/360" class="yt-thumbnail"><div class="yt-duration">22:15</div></div>
-                        <div class="yt-details" style="max-width: 550px;">
-                            <div class="yt-video-title" style="font-size:18px;">How To Build a Snow Shelter in 30 Minutes</div>
-                            <div class="yt-views" style="margin-bottom: 10px;">980K views • 4 months ago</div>
-                            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                                <div class="yt-avatar" style="width:24px; height:24px; font-size:12px; background: #009688;">S</div>
-                                <div class="yt-channel-name">SurvivalSkills</div>
-                            </div>
-                            <div class="yt-views" style="font-size:12px;">Step by step wilderness shelter construction in sub-zero winter environments...</div>
-                        </div>
-                    </div>
+        <div class="preview-block">
+          <div class="preview-label">Homepage Small (240x135)</div>
+          <div class="context-row">
+            <div class="yt-card-grid" style="width: 240px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 240px; height: 135px"
+              >
+                <img
+                  src="https://picsum.photos/id/48/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">08:12</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-avatar"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    font-size: 12px;
+                    background: #9c27b0;
+                  "
+                >
+                  C
                 </div>
-            </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Search Result Small (240x135)</div>
-                <div class="context-col">
-                    <div class="yt-card-list user-card">
-                        <div class="yt-thumbnail-container" style="width: 240px; height: 135px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title dynamic-title">Title Here</div>
-                            <div class="yt-views" style="font-size:12px; margin-bottom: 6px;">2.4M views • 1 day ago</div>
-                            <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list">
-                        <div class="yt-thumbnail-container" style="width: 240px; height: 135px;"><img src="https://picsum.photos/id/180/640/360" class="yt-thumbnail"><div class="yt-duration">11:08</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title">Winter Camping Gear You Actually Need</div>
-                            <div class="yt-views" style="font-size:12px; margin-bottom: 6px;">310K views • 1 year ago</div>
-                            <div class="yt-channel-name" style="font-size:12px;">GearPro</div>
-                        </div>
-                    </div>
+                <div class="yt-meta">
+                  <div class="yt-video-title" style="font-size: 13px">
+                    Full Stack Guide 2026
+                  </div>
+                  <div class="yt-channel-name" style="font-size: 12px">
+                    DevBytes
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">150K views</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Sidebar Suggested Video (168x94)</div>
-                <div class="context-col" style="max-width: 420px;">
-                    <div class="yt-card-list">
-                        <div class="yt-thumbnail-container" style="width: 168px; height: 94px;"><img src="https://picsum.photos/id/200/640/360" class="yt-thumbnail"><div class="yt-duration">07:44</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title" style="font-size:13px; margin-bottom:4px;">10 Common Camping Mistakes</div>
-                            <div class="yt-channel-name" style="font-size:12px;">CampLife</div>
-                            <div class="yt-views" style="font-size:12px;">640K views • 2 weeks ago</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list user-card">
-                        <div class="yt-thumbnail-container" style="width: 168px; height: 94px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title dynamic-title" style="font-size:13px; margin-bottom:4px;">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                            <div class="yt-views" style="font-size:12px;">2.4M views • 1 day ago</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list">
-                        <div class="yt-thumbnail-container" style="width: 168px; height: 94px;"><img src="https://picsum.photos/id/215/640/360" class="yt-thumbnail"><div class="yt-duration">16:50</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title" style="font-size:13px; margin-bottom:4px;">Mountain Rescue Live Operation</div>
-                            <div class="yt-channel-name" style="font-size:12px;">AeroSearch</div>
-                            <div class="yt-views" style="font-size:12px;">1.2M views • 6 months ago</div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid user-card" style="width: 240px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 240px; height: 135px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-avatar dynamic-avatar"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    font-size: 12px;
+                    background: #ff5722;
+                  "
+                >
+                  M
                 </div>
-            </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Watch Later (540x106)</div>
-                <div class="context-col">
-                    <div class="yt-card-list user-card" style="width: 540px; background: var(--yt-bg); padding: 8px; border-radius: 8px; border: 1px solid var(--yt-border);">
-                        <div class="yt-thumbnail-container" style="width: 188px; height: 106px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details" style="justify-content: center;">
-                            <div class="yt-video-title dynamic-title" style="font-size:15px;">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list" style="width: 540px; background: var(--yt-bg); padding: 8px; border-radius: 8px; border: 1px solid var(--yt-border);">
-                        <div class="yt-thumbnail-container" style="width: 188px; height: 106px;"><img src="https://picsum.photos/id/230/640/360" class="yt-thumbnail"><div class="yt-duration">42:10</div></div>
-                        <div class="yt-details" style="justify-content: center;">
-                            <div class="yt-video-title" style="font-size:15px;">Deep Focus Ambient Beats & Coding Session</div>
-                            <div class="yt-channel-name" style="font-size:12px;">StudyLoft</div>
-                        </div>
-                    </div>
+                <div class="yt-meta">
+                  <div
+                    class="yt-video-title dynamic-title"
+                    style="font-size: 13px"
+                  >
+                    Title Here
+                  </div>
+                  <div
+                    class="yt-channel-name dynamic-channel"
+                    style="font-size: 12px"
+                  >
+                    Channel
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">2.4M views</div>
                 </div>
+              </div>
             </div>
-
+            <div class="yt-card-grid" style="width: 240px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 240px; height: 135px"
+              >
+                <img
+                  src="https://picsum.photos/id/60/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">15:00</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-avatar"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    font-size: 12px;
+                    background: #ff9800;
+                  "
+                >
+                  W
+                </div>
+                <div class="yt-meta">
+                  <div class="yt-video-title" style="font-size: 13px">
+                    Workspace Upgrade Tips
+                  </div>
+                  <div class="yt-channel-name" style="font-size: 12px">
+                    DeskSetup
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">320K views</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h2 class="category-title">Mobile Views</h2>
-        <div class="previews-grid">
-            
-            <div class="preview-block">
-                <div class="preview-label">Mobile Homepage (320x180)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid mobile-edge user-card" style="width: 320px; border: 1px solid var(--yt-border); border-radius: 8px; overflow: hidden; padding-bottom: 12px;">
-                        <div class="yt-thumbnail-container" style="width: 320px; height: 180px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details" style="margin-top: 6px;">
-                            <div class="yt-avatar dynamic-avatar" style="background:#FF5722;">M</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title">Title Here</div>
-                                <div class="yt-views"><span class="dynamic-channel">Channel</span> • 2.4M views</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid mobile-edge" style="width: 320px; border: 1px solid var(--yt-border); border-radius: 8px; overflow: hidden; padding-bottom: 12px;">
-                        <div class="yt-thumbnail-container" style="width: 320px; height: 180px;"><img src="https://picsum.photos/id/250/640/360" class="yt-thumbnail"><div class="yt-duration">08:50</div></div>
-                        <div class="yt-details" style="margin-top: 6px;">
-                            <div class="yt-avatar" style="background:#673AB7;">V</div>
-                            <div class="yt-meta">
-                                <div class="yt-video-title">Top 5 Smartphone Cameras Compared</div>
-                                <div class="yt-views">MobileReview • 1.5M views</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="preview-block">
+          <div class="preview-label">Channel Page (270x150)</div>
+          <div class="context-row">
+            <div class="yt-card-grid user-card" style="width: 270px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 270px; height: 150px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div class="yt-video-title dynamic-title">Title Here</div>
+                  <div class="yt-views">2.4M views • 1 day ago</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Mobile Search (320x180)</div>
-                <div class="context-row">
-                    <div class="yt-card-grid mobile-edge user-card" style="width: 320px; border: 1px solid var(--yt-border); border-radius: 8px; overflow: hidden; padding-bottom: 12px;">
-                        <div class="yt-thumbnail-container" style="width: 320px; height: 180px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details" style="margin-top: 6px;">
-                            <div class="yt-meta">
-                                <div class="yt-video-title dynamic-title">Title Here</div>
-                                <div class="yt-views">2.4M views • 1 day ago</div>
-                                <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-                                    <div class="yt-avatar dynamic-avatar" style="width:18px; height:18px; font-size:10px; background:#FF5722;">M</div>
-                                    <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="yt-card-grid mobile-edge" style="width: 320px; border: 1px solid var(--yt-border); border-radius: 8px; overflow: hidden; padding-bottom: 12px;">
-                        <div class="yt-thumbnail-container" style="width: 320px; height: 180px;"><img src="https://picsum.photos/id/270/640/360" class="yt-thumbnail"><div class="yt-duration">13:12</div></div>
-                        <div class="yt-details" style="margin-top: 6px;">
-                            <div class="yt-meta">
-                                <div class="yt-video-title">Extreme Cold Gear Comparison Tests</div>
-                                <div class="yt-views">890K views • 2 weeks ago</div>
-                                <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
-                                    <div class="yt-avatar" style="width:18px; height:18px; font-size:10px; background:#00BCD4;">T</div>
-                                    <div class="yt-channel-name" style="font-size:12px;">TrailLabs</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 270px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 270px; height: 150px"
+              >
+                <img
+                  src="https://picsum.photos/id/85/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">09:40</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div class="yt-video-title">My Everyday Carry Essentials</div>
+                  <div class="yt-views">1.1M views • 3 weeks ago</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Mobile Suggested (168x94)</div>
-                <div class="context-col" style="max-width: 360px;">
-                    <div class="yt-card-list user-card">
-                        <div class="yt-thumbnail-container" style="width: 168px; height: 94px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title dynamic-title" style="font-size:13px; margin-bottom:2px;">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel" style="font-size:12px;">Channel</div>
-                            <div class="yt-views" style="font-size:12px;">2.4M views • 1 day ago</div>
-                        </div>
-                    </div>
-                    <div class="yt-card-list">
-                        <div class="yt-thumbnail-container" style="width: 168px; height: 94px;"><img src="https://picsum.photos/id/290/640/360" class="yt-thumbnail"><div class="yt-duration">04:30</div></div>
-                        <div class="yt-details">
-                            <div class="yt-video-title" style="font-size:13px; margin-bottom:2px;">5 Quick Tips for Clean Edits</div>
-                            <div class="yt-channel-name" style="font-size:12px;">CreatorTips</div>
-                            <div class="yt-views" style="font-size:12px;">190K views • 3 days ago</div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 270px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 270px; height: 150px"
+              >
+                <img
+                  src="https://picsum.photos/id/96/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">21:05</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div class="yt-video-title">
+                    A Week Without My Phone Challenge
+                  </div>
+                  <div class="yt-views">870K views • 2 months ago</div>
                 </div>
+              </div>
             </div>
-
+          </div>
         </div>
 
-        <h2 class="category-title">Apple TV & Smart TV Views</h2>
-        <div class="previews-grid">
-            
-            <div class="preview-block">
-                <div class="preview-label">Apple TV YouTube Homepage (512x288)</div>
-                <div class="context-row">
-                    <div class="tv-card user-card" style="width: 512px;">
-                        <div class="yt-thumbnail-container" style="width: 512px; height: 288px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div>
-                            <div class="yt-video-title dynamic-title">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel">Channel</div>
-                        </div>
-                    </div>
-                    <div class="tv-card" style="width: 512px;">
-                        <div class="yt-thumbnail-container" style="width: 512px; height: 288px;"><img src="https://picsum.photos/id/319/640/360" class="yt-thumbnail"><div class="yt-duration">45:10</div></div>
-                        <div>
-                            <div class="yt-video-title">4K Drone Journey Through Norway Fjords</div>
-                            <div class="yt-channel-name">EarthVisions 4K</div>
-                        </div>
-                    </div>
+        <div class="preview-block">
+          <div class="preview-label">Channel Page Small (198x112)</div>
+          <div class="context-row">
+            <div class="yt-card-grid user-card" style="width: 198px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 198px; height: 112px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div
+                    class="yt-video-title dynamic-title"
+                    style="font-size: 13px"
+                  >
+                    Title Here
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">2.4M views</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Apple TV Recommended (512x288)</div>
-                <div class="context-row">
-                    <div class="tv-card" style="width: 512px;">
-                        <div class="yt-thumbnail-container" style="width: 512px; height: 288px;"><img src="https://picsum.photos/id/338/640/360" class="yt-thumbnail"><div class="yt-duration">31:00</div></div>
-                        <div>
-                            <div class="yt-video-title">Deep Space Telescopes: Secrets of the Cosmos</div>
-                            <div class="yt-channel-name">ScienceHub</div>
-                        </div>
-                    </div>
-                    <div class="tv-card user-card" style="width: 512px;">
-                        <div class="yt-thumbnail-container" style="width: 512px; height: 288px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div>
-                            <div class="yt-video-title dynamic-title">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel">Channel</div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 198px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 198px; height: 112px"
+              >
+                <img
+                  src="https://picsum.photos/id/111/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">14:20</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div class="yt-video-title" style="font-size: 13px">
+                    Living Tiny House Tour
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">540K views</div>
                 </div>
+              </div>
             </div>
-
-            <div class="preview-block">
-                <div class="preview-label">Apple TV Watch Later (360x200)</div>
-                <div class="context-row">
-                    <div class="tv-card user-card" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 200px;"><img src="" class="yt-thumbnail dynamic-thumb"><div class="yt-duration">18:24</div></div>
-                        <div>
-                            <div class="yt-video-title dynamic-title" style="font-size:16px;">Title Here</div>
-                            <div class="yt-channel-name dynamic-channel" style="font-size:13px;">Channel</div>
-                        </div>
-                    </div>
-                    <div class="tv-card" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 200px;"><img src="https://picsum.photos/id/365/640/360" class="yt-thumbnail"><div class="yt-duration">12:40</div></div>
-                        <div>
-                            <div class="yt-video-title" style="font-size:16px;">How To Build a Clean Minimalist Office</div>
-                            <div class="yt-channel-name" style="font-size:13px;">DesignSpace</div>
-                        </div>
-                    </div>
-                    <div class="tv-card" style="width: 360px;">
-                        <div class="yt-thumbnail-container" style="width: 360px; height: 200px;"><img src="https://picsum.photos/id/380/640/360" class="yt-thumbnail"><div class="yt-duration">27:18</div></div>
-                        <div>
-                            <div class="yt-video-title" style="font-size:16px;">Ultimate Road Trip Across the Coastline</div>
-                            <div class="yt-channel-name" style="font-size:13px;">RoamFree</div>
-                        </div>
-                    </div>
+            <div class="yt-card-grid" style="width: 198px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 198px; height: 112px"
+              >
+                <img
+                  src="https://picsum.photos/id/133/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">06:55</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-meta">
+                  <div class="yt-video-title" style="font-size: 13px">
+                    Morning Coffee Routine
+                  </div>
+                  <div class="yt-views" style="font-size: 12px">230K views</div>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      <h2 class="category-title">Search, Sidebar & Watch Later</h2>
+      <div class="previews-grid">
+        <div class="preview-block">
+          <div class="preview-label">Search Result Large (360x202)</div>
+          <div class="context-col">
+            <div class="yt-card-list user-card">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 202px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details" style="max-width: 550px">
+                <div
+                  class="yt-video-title dynamic-title"
+                  style="font-size: 18px"
+                >
+                  Title Here
+                </div>
+                <div class="yt-views" style="margin-bottom: 10px">
+                  2.4M views • 1 day ago
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <div
+                    class="yt-avatar dynamic-avatar"
+                    style="
+                      width: 24px;
+                      height: 24px;
+                      font-size: 12px;
+                      background: #ff5722;
+                    "
+                  >
+                    M
+                  </div>
+                  <div class="yt-channel-name dynamic-channel">Channel</div>
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  Full documentary detailing 50 hours trapped in harsh snow and
+                  ice conditions...
+                </div>
+              </div>
+            </div>
+            <div class="yt-card-list">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 202px"
+              >
+                <img
+                  src="https://picsum.photos/id/160/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">22:15</div>
+              </div>
+              <div class="yt-details" style="max-width: 550px">
+                <div class="yt-video-title" style="font-size: 18px">
+                  How To Build a Snow Shelter in 30 Minutes
+                </div>
+                <div class="yt-views" style="margin-bottom: 10px">
+                  980K views • 4 months ago
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <div
+                    class="yt-avatar"
+                    style="
+                      width: 24px;
+                      height: 24px;
+                      font-size: 12px;
+                      background: #009688;
+                    "
+                  >
+                    S
+                  </div>
+                  <div class="yt-channel-name">SurvivalSkills</div>
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  Step by step wilderness shelter construction in sub-zero
+                  winter environments...
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="preview-block">
+          <div class="preview-label">Search Result Small (240x135)</div>
+          <div class="context-col">
+            <div class="yt-card-list user-card">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 240px; height: 135px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-video-title dynamic-title">Title Here</div>
+                <div
+                  class="yt-views"
+                  style="font-size: 12px; margin-bottom: 6px"
+                >
+                  2.4M views • 1 day ago
+                </div>
+                <div
+                  class="yt-channel-name dynamic-channel"
+                  style="font-size: 12px"
+                >
+                  Channel
+                </div>
+              </div>
+            </div>
+            <div class="yt-card-list">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 240px; height: 135px"
+              >
+                <img
+                  src="https://picsum.photos/id/180/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">11:08</div>
+              </div>
+              <div class="yt-details">
+                <div class="yt-video-title">
+                  Winter Camping Gear You Actually Need
+                </div>
+                <div
+                  class="yt-views"
+                  style="font-size: 12px; margin-bottom: 6px"
+                >
+                  310K views • 1 year ago
+                </div>
+                <div class="yt-channel-name" style="font-size: 12px">
+                  GearPro
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Sidebar Suggested Video (168x94)</div>
+          <div class="context-col" style="max-width: 420px">
+            <div class="yt-card-list">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 168px; height: 94px"
+              >
+                <img
+                  src="https://picsum.photos/id/200/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">07:44</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-video-title"
+                  style="font-size: 13px; margin-bottom: 4px"
+                >
+                  10 Common Camping Mistakes
+                </div>
+                <div class="yt-channel-name" style="font-size: 12px">
+                  CampLife
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  640K views • 2 weeks ago
+                </div>
+              </div>
+            </div>
+            <div class="yt-card-list user-card">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 168px; height: 94px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-video-title dynamic-title"
+                  style="font-size: 13px; margin-bottom: 4px"
+                >
+                  Title Here
+                </div>
+                <div
+                  class="yt-channel-name dynamic-channel"
+                  style="font-size: 12px"
+                >
+                  Channel
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  2.4M views • 1 day ago
+                </div>
+              </div>
+            </div>
+            <div class="yt-card-list">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 168px; height: 94px"
+              >
+                <img
+                  src="https://picsum.photos/id/215/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">16:50</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-video-title"
+                  style="font-size: 13px; margin-bottom: 4px"
+                >
+                  Mountain Rescue Live Operation
+                </div>
+                <div class="yt-channel-name" style="font-size: 12px">
+                  AeroSearch
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  1.2M views • 6 months ago
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Watch Later (540x106)</div>
+          <div class="context-col">
+            <div
+              class="yt-card-list user-card"
+              style="
+                width: 540px;
+                background: var(--yt-bg);
+                padding: 8px;
+                border-radius: 8px;
+                border: 1px solid var(--yt-border);
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 188px; height: 106px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details" style="justify-content: center">
+                <div
+                  class="yt-video-title dynamic-title"
+                  style="font-size: 15px"
+                >
+                  Title Here
+                </div>
+                <div
+                  class="yt-channel-name dynamic-channel"
+                  style="font-size: 12px"
+                >
+                  Channel
+                </div>
+              </div>
+            </div>
+            <div
+              class="yt-card-list"
+              style="
+                width: 540px;
+                background: var(--yt-bg);
+                padding: 8px;
+                border-radius: 8px;
+                border: 1px solid var(--yt-border);
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 188px; height: 106px"
+              >
+                <img
+                  src="https://picsum.photos/id/230/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">42:10</div>
+              </div>
+              <div class="yt-details" style="justify-content: center">
+                <div class="yt-video-title" style="font-size: 15px">
+                  Deep Focus Ambient Beats & Coding Session
+                </div>
+                <div class="yt-channel-name" style="font-size: 12px">
+                  StudyLoft
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="category-title">Mobile Views</h2>
+      <div class="previews-grid">
+        <div class="preview-block">
+          <div class="preview-label">Mobile Homepage (320x180)</div>
+          <div class="context-row">
+            <div
+              class="yt-card-grid mobile-edge user-card"
+              style="
+                width: 320px;
+                border: 1px solid var(--yt-border);
+                border-radius: 8px;
+                overflow: hidden;
+                padding-bottom: 12px;
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 320px; height: 180px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details" style="margin-top: 6px">
+                <div
+                  class="yt-avatar dynamic-avatar"
+                  style="background: #ff5722"
+                >
+                  M
+                </div>
+                <div class="yt-meta">
+                  <div class="yt-video-title dynamic-title">Title Here</div>
+                  <div class="yt-views">
+                    <span class="dynamic-channel">Channel</span> • 2.4M views
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="yt-card-grid mobile-edge"
+              style="
+                width: 320px;
+                border: 1px solid var(--yt-border);
+                border-radius: 8px;
+                overflow: hidden;
+                padding-bottom: 12px;
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 320px; height: 180px"
+              >
+                <img
+                  src="https://picsum.photos/id/250/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">08:50</div>
+              </div>
+              <div class="yt-details" style="margin-top: 6px">
+                <div class="yt-avatar" style="background: #673ab7">V</div>
+                <div class="yt-meta">
+                  <div class="yt-video-title">
+                    Top 5 Smartphone Cameras Compared
+                  </div>
+                  <div class="yt-views">MobileReview • 1.5M views</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Mobile Search (320x180)</div>
+          <div class="context-row">
+            <div
+              class="yt-card-grid mobile-edge user-card"
+              style="
+                width: 320px;
+                border: 1px solid var(--yt-border);
+                border-radius: 8px;
+                overflow: hidden;
+                padding-bottom: 12px;
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 320px; height: 180px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details" style="margin-top: 6px">
+                <div class="yt-meta">
+                  <div class="yt-video-title dynamic-title">Title Here</div>
+                  <div class="yt-views">2.4M views • 1 day ago</div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 6px;
+                      margin-top: 4px;
+                    "
+                  >
+                    <div
+                      class="yt-avatar dynamic-avatar"
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        font-size: 10px;
+                        background: #ff5722;
+                      "
+                    >
+                      M
+                    </div>
+                    <div
+                      class="yt-channel-name dynamic-channel"
+                      style="font-size: 12px"
+                    >
+                      Channel
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="yt-card-grid mobile-edge"
+              style="
+                width: 320px;
+                border: 1px solid var(--yt-border);
+                border-radius: 8px;
+                overflow: hidden;
+                padding-bottom: 12px;
+              "
+            >
+              <div
+                class="yt-thumbnail-container"
+                style="width: 320px; height: 180px"
+              >
+                <img
+                  src="https://picsum.photos/id/270/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">13:12</div>
+              </div>
+              <div class="yt-details" style="margin-top: 6px">
+                <div class="yt-meta">
+                  <div class="yt-video-title">
+                    Extreme Cold Gear Comparison Tests
+                  </div>
+                  <div class="yt-views">890K views • 2 weeks ago</div>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 6px;
+                      margin-top: 4px;
+                    "
+                  >
+                    <div
+                      class="yt-avatar"
+                      style="
+                        width: 18px;
+                        height: 18px;
+                        font-size: 10px;
+                        background: #00bcd4;
+                      "
+                    >
+                      T
+                    </div>
+                    <div class="yt-channel-name" style="font-size: 12px">
+                      TrailLabs
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Mobile Suggested (168x94)</div>
+          <div class="context-col" style="max-width: 360px">
+            <div class="yt-card-list user-card">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 168px; height: 94px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-video-title dynamic-title"
+                  style="font-size: 13px; margin-bottom: 2px"
+                >
+                  Title Here
+                </div>
+                <div
+                  class="yt-channel-name dynamic-channel"
+                  style="font-size: 12px"
+                >
+                  Channel
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  2.4M views • 1 day ago
+                </div>
+              </div>
+            </div>
+            <div class="yt-card-list">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 168px; height: 94px"
+              >
+                <img
+                  src="https://picsum.photos/id/290/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">04:30</div>
+              </div>
+              <div class="yt-details">
+                <div
+                  class="yt-video-title"
+                  style="font-size: 13px; margin-bottom: 2px"
+                >
+                  5 Quick Tips for Clean Edits
+                </div>
+                <div class="yt-channel-name" style="font-size: 12px">
+                  CreatorTips
+                </div>
+                <div class="yt-views" style="font-size: 12px">
+                  190K views • 3 days ago
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="category-title">Apple TV & Smart TV Views</h2>
+      <div class="previews-grid">
+        <div class="preview-block">
+          <div class="preview-label">Apple TV YouTube Homepage (512x288)</div>
+          <div class="context-row">
+            <div class="tv-card user-card" style="width: 512px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 512px; height: 288px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div>
+                <div class="yt-video-title dynamic-title">Title Here</div>
+                <div class="yt-channel-name dynamic-channel">Channel</div>
+              </div>
+            </div>
+            <div class="tv-card" style="width: 512px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 512px; height: 288px"
+              >
+                <img
+                  src="https://picsum.photos/id/319/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">45:10</div>
+              </div>
+              <div>
+                <div class="yt-video-title">
+                  4K Drone Journey Through Norway Fjords
+                </div>
+                <div class="yt-channel-name">EarthVisions 4K</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Apple TV Recommended (512x288)</div>
+          <div class="context-row">
+            <div class="tv-card" style="width: 512px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 512px; height: 288px"
+              >
+                <img
+                  src="https://picsum.photos/id/338/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">31:00</div>
+              </div>
+              <div>
+                <div class="yt-video-title">
+                  Deep Space Telescopes: Secrets of the Cosmos
+                </div>
+                <div class="yt-channel-name">ScienceHub</div>
+              </div>
+            </div>
+            <div class="tv-card user-card" style="width: 512px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 512px; height: 288px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div>
+                <div class="yt-video-title dynamic-title">Title Here</div>
+                <div class="yt-channel-name dynamic-channel">Channel</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-label">Apple TV Watch Later (360x200)</div>
+          <div class="context-row">
+            <div class="tv-card user-card" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 200px"
+              >
+                <img src="" class="yt-thumbnail dynamic-thumb" />
+                <div class="yt-duration">18:24</div>
+              </div>
+              <div>
+                <div
+                  class="yt-video-title dynamic-title"
+                  style="font-size: 16px"
+                >
+                  Title Here
+                </div>
+                <div
+                  class="yt-channel-name dynamic-channel"
+                  style="font-size: 13px"
+                >
+                  Channel
+                </div>
+              </div>
+            </div>
+            <div class="tv-card" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 200px"
+              >
+                <img
+                  src="https://picsum.photos/id/365/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">12:40</div>
+              </div>
+              <div>
+                <div class="yt-video-title" style="font-size: 16px">
+                  How To Build a Clean Minimalist Office
+                </div>
+                <div class="yt-channel-name" style="font-size: 13px">
+                  DesignSpace
+                </div>
+              </div>
+            </div>
+            <div class="tv-card" style="width: 360px">
+              <div
+                class="yt-thumbnail-container"
+                style="width: 360px; height: 200px"
+              >
+                <img
+                  src="https://picsum.photos/id/380/640/360"
+                  class="yt-thumbnail"
+                />
+                <div class="yt-duration">27:18</div>
+              </div>
+              <div>
+                <div class="yt-video-title" style="font-size: 16px">
+                  Ultimate Road Trip Across the Coastline
+                </div>
+                <div class="yt-channel-name" style="font-size: 13px">
+                  RoamFree
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-
-</body>
+  </body>
 </html>
