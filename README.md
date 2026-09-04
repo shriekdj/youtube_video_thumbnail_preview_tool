@@ -1,6 +1,6 @@
 # YouTube Thumbnail Preview Tool
 
-A web-based tool to preview how YouTube video thumbnail images and titles will appear across different screens and pages — desktop, mobile, search, watch later, and Apple TV/TV.
+A web-based tool to preview how YouTube video thumbnail images and titles will appear across different screens and pages - desktop, mobile, search, watch later, and Apple TV/TV.
 
 ## Features
 
