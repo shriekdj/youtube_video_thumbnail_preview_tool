@@ -1,0 +1,286 @@
+/* Light Theme (Default) */
+:root {
+  --yt-bg: #f9f9f9;
+  --yt-card-bg: #ffffff;
+  --yt-text: #0f0f0f;
+  --yt-text-secondary: #606060;
+  --yt-border: #e5e5e5;
+  --yt-toolbar-bg: #ffffff;
+  --font-family: "Roboto", Arial, sans-serif;
+  --yt-badge-bg: rgba(0, 0, 0, 0.8);
+  --yt-badge-text: #ffffff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --yt-bg: #0f0f0f;
+  --yt-card-bg: #1f1f1f;
+  --yt-text: #f1f1f1;
+  --yt-text-secondary: #aaaaaa;
+  --yt-border: #3f3f3f;
+  --yt-toolbar-bg: #212121;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--yt-bg);
+  color: var(--yt-text);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+/* Toolbar */
+.toolbar {
+  background-color: var(--yt-toolbar-bg);
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--yt-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.input-group label {
+  font-size: 12px;
+  color: var(--yt-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.input-group input[type="text"] {
+  background-color: var(--yt-bg);
+  border: 1px solid var(--yt-border);
+  color: var(--yt-text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 240px;
+  outline: none;
+}
+.input-group input[type="file"] {
+  font-size: 13px;
+  color: var(--yt-text);
+  padding: 4px 0;
+}
+
+.theme-toggle {
+  background-color: var(--yt-text);
+  color: var(--yt-bg);
+  border: none;
+  padding: 9px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* Container Layout */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px 80px;
+}
+.category-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--yt-border);
+}
+.previews-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.preview-block {
+  background: var(--yt-card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--yt-border);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.preview-label {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--yt-text);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--yt-border);
+}
+.context-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+.context-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* General Thumbnail Elements */
+.yt-thumbnail-container {
+  position: relative;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+}
+.yt-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #333;
+  display: block;
+}
+.yt-duration {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: var(--yt-badge-bg);
+  color: var(--yt-badge-text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+/* Grid Type Cards */
+.yt-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.yt-card-grid .yt-details {
+  display: flex;
+  gap: 10px;
+}
+.yt-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+.yt-meta {
+  display: flex;
+  flex-direction: column;
+}
+.yt-video-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--yt-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+.yt-channel-name,
+.yt-views {
+  font-size: 13px;
+  color: var(--yt-text-secondary);
+  line-height: 1.35;
+}
+
+/* List Type Cards */
+.yt-card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.yt-card-list .yt-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.yt-card-list .yt-video-title {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Mobile Adjustments */
+.mobile-edge .yt-thumbnail {
+  border-radius: 0;
+}
+.mobile-edge .yt-details {
+  padding: 0 10px;
+}
+
+/* Apple TV Specific Cards */
+.tv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tv-card .yt-thumbnail {
+  border-radius: 12px;
+}
+.tv-card .yt-thumbnail-container {
+  border: 4px solid transparent;
+  border-radius: 16px;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.tv-card:hover .yt-thumbnail-container {
+  border-color: #3ea6ff;
+  transform: scale(1.02);
+}
+.tv-card .yt-video-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.tv-card .yt-channel-name {
+  font-size: 14px;
+}
+
+/* Badge for User Thumbnail */
+.user-card {
+  position: relative;
+}
+.user-card::before {
+  content: "YOURS";
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  background: #ff0000;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
